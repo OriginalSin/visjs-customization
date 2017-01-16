@@ -139,8 +139,8 @@ function onlyUnique(value, index, array) {
 }
 console.log(items);
 // timeline select
-// var tl = new vis.Timeline(container, items, groups, options);
-var tl = new vis.Timeline(container, [], [], options);
+var tl = new vis.Timeline(container, items, groups, options);
+// var tl = new vis.Timeline(container, [], [], options);
 tl.on('select', function(){
     var selected = tl.getSelection();
     console.log(selected);
