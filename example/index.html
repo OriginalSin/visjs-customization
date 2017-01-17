@@ -6,25 +6,34 @@
     <title>Vis customization</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css"/>
     <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js"></script>
 </head>
 <body>
     <div id="wrap">
         <div id="left-panel">
-            <div class="header">
-                <h2>Vis customization</h2>
-            </div>
-            <div id="content">
-                <input class="buttons" id="01" type="button" value="first" />
-                <br />
-                <input class="buttons" id="01" type="button" value="first" />
-                <br />
-                <input class="buttons" id="01" type="button" value="first" />
-                <br />
-                <input class="buttons" id="01" type="button" value="first" />
-                <br />
+            <div id="left-wrap">
+                <div class="left-header">
+                    Vis customization
+                </div>
+                <div id="left-content">
+                    <input class="buttons" id="default" type="button" value="Default timeline" />
+                    <br />
+                    <input class="buttons" id="ru" type="button" value="01. Russian months" />
+                    <br />
+                    <input class="buttons" id="under" type="button" value="02. Under the line" />
+                    <br />
+                    <input class="buttons" id="custom-style" type="button" value="03. Custom style" />
+                    <br />
+                    <input class="buttons" id="evented" type="button" value="04. Events" />
+                    <br />
+                    <div id="event-name">
+                        
+                    </div>
+                </div>
             </div>
         </div>
-        
+
         <div id="tl-container">
         </div>
     </div>
