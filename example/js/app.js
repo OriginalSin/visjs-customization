@@ -114,13 +114,14 @@ var customStyleButton = document.getElementById('custom-style'),
         orientation: 'top',
         autoResize: false,
         horizontalScroll: false,
-        zoomable: false
+        zoomable: false,
+        selectable: false
     };
 customStyleButton.onclick = function () {
     var groups = [{
         id: 1
         }],
-        style = 'font-size: 20; background-color: white; color: red;',
+        style = '',
         data = [
           {id: 1,   content: '', type: 'point', group: 1, start: '2016-01-15', style: style},
           {id: 2,   content: '', type: 'point', group: 1, start: '2016-02-15', style: style},
@@ -136,17 +137,21 @@ customStyleButton.onclick = function () {
           {id: 12,  content: '', type: 'point', group: 1, start: '2016-12-15', style: style}
       ],
       items = new vis.DataSet(data);
-      console.log(items);
-
+// vis-item vis-point vis-readonly numberCircle
     container.innerHTML = '';
     if (tl) {
         tl.destroy();
         tl = null;
     }
     tl = new vis.Timeline(container, items, groups, customStyleOptions);
-    // tl.on('select', function (items, event) {
-    //
-    // })
+    setTimeout(function () {
+        var dots = document.getElementsByClassName('vis-item');
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className += ' numberCircle';
+            // dots[i].style.top = '10px';
+            dots[i].innerHTML = data[i].id;
+        }
+    }, 30);
 }
 
 // 5. Evented
