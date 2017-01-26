@@ -76,3 +76,6 @@ body {
 
     font: 10px Arial;
 }
+.sql-input {
+    min-width: 800px;
+}

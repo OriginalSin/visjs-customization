@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vis customization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./example/css/main.css"/>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="left-panel">
+            <div id="left-wrap">
+                <div class="left-header">
+                    Vis customization
+                </div>
+                <div id="left-content">
+                    <input class="buttons" id="default" type="button" value="Default timeline" />
+                    <br />
+                    <input class="buttons" id="ru" type="button" value="01. Russian months" />
+                    <br />
+                    <input class="buttons" id="under" type="button" value="02. Under the line" />
+                    <br />
+                    <input class="buttons" id="custom-style" type="button" value="03. Custom style" />
+                    <br />
+                    <input class="buttons" id="evented" type="button" value="04. Events" />
+                    <br />
+                    <div id="event-name">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sql-string">
+			<textarea class="sql-input">
+select count(*) as content, [acqdate] as start from [61F54CF35EC44536B527A2168BE6F5A0] WHERE [acqdate] > '2015-01-01' AND [acqdate] < '2017-01-01' GROUP BY [acqdate]
+			</textarea>
+			<br />
+			<input class="buttons getData" type="button" value="Get data" />
+        </div>
+        <div id="tl-container">
+        </div>
+    </div>
+    <script src="./example/js/example.js"></script>
+</body>
+</html>
